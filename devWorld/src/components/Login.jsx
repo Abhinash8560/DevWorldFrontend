@@ -10,7 +10,8 @@ const Login = () => {
 
   const[email,setEmail]=useState("shreya@xample.com");
     const[password,setPassword]=useState("Shreya@21");
-    
+    const[error,setError]=useState(" ");
+
     const dispatch=useDispatch();
     const navigate=useNavigate();
 
@@ -26,7 +27,7 @@ const Login = () => {
     dispatch(addUser(res.data));
     navigate('/');
   }catch(err){
-    console.log(err);
+    setError(err?.response?.data || "Something went Wrong");
   }
   }
   
@@ -97,8 +98,8 @@ const Login = () => {
 
 {/* password */}
 
-
-    <div className="card-actions flex justify-center w-full p-4">
+     <p className='text-red-500'>{error}</p>
+   <div className="card-actions flex justify-center w-full p-4">
       <button onClick={handleLogin} className="btn btn-success">Login</button>
     </div>
   </div>
