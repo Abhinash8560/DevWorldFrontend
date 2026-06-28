@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Profile = () => {
+      const[email,setEmail]=useState("shreya@example.com");
+     
   return (
-    <div>
-      <h1>Profile</h1>
-    </div>
+    <>
+<p>Profile˜</p>  
+  </>
   )
 }
 
