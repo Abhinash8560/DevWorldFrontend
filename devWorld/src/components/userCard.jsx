@@ -1,15 +1,15 @@
 import React from "react";
 export default function UserCard({user}){
-    console.log(user.users);
-    const{firstname,lastname,photoUrl,age,gender,skills,about}=user.users[0];
+    console.log("fed",user);
+    const{firstname,lastname,photoUrl,age,gender,skills,about}=user;
     return (
         <>
-<div className="card bg-base-200  w-96 shadow-sm">  <figure>
+<div className="card bg-base-200  w-96 shadow-sm my-8 ">  <figure>
     <img
-      src={user?.users[0]?.photoUrl}
+      src={photoUrl}
       alt="photoUrl" />
   </figure>
-<div className="card-body">
+<div className="">
   <h2 className="card-title justify-center">
     {firstname + " " + lastname}
   </h2>
@@ -33,6 +33,8 @@ export default function UserCard({user}){
   Interested
 </button>
   </div>
+
+   
 </div>
 </div>
         </>

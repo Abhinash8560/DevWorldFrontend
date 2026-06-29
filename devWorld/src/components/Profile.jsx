@@ -1,11 +1,19 @@
 import React, { useState } from 'react'
+import EditProfile from './EditProfile';
+import { useSelector } from 'react-redux';
 
 const Profile = () => {
-      const[email,setEmail]=useState("shreya@example.com");
      
+      const user=useSelector((store)=>store.user);
+
   return (
     <>
-<p>Profile˜</p>  
+   {user && (
+    <div>
+    <EditProfile user={user} />
+    </div>
+
+   )}
   </>
   )
 }
