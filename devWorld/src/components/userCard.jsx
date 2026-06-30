@@ -1,13 +1,17 @@
 import React from "react";
 export default function UserCard({user}){
-    console.log("fed",user);
+    // console.log("fed",user);
     const{firstname,lastname,photoUrl,age,gender,skills,about}=user;
     return (
         <>
-<div className="card bg-base-200  w-96 shadow-sm my-8 ">  <figure>
+<div className="">
+   <figure className="text-center flex justify-center">
     <img
       src={photoUrl}
-      alt="photoUrl" />
+      alt="photoUrl"
+      width={160}
+      height={160}
+      />
   </figure>
 <div className="">
   <h2 className="card-title justify-center">
