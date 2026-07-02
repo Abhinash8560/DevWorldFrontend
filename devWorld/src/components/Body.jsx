@@ -31,7 +31,7 @@ dispatch(addUser(res.data));
    
   },[]);
   return (
-<div className="max-h-[85vh] overflow-y-auto">
+<div className="max-h-[85vh] ">
             <NavBar />
           <Outlet  />
           <Footer />
